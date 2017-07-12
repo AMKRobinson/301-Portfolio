@@ -2,13 +2,13 @@
 
 var projects = [];
 
-function project(name, date, body, language, collaborator, image) {
-  this.name = name;
-  this.date = date;
-  this.body = body;
-  this.language = language;
-  this.collaborator = collaborator;
-  this.image = image;
+function project(rawprojectData) {
+  this.name = rawprojectData.name;
+  this.date = rawprojectData.date;
+  this.body = rawprojectData.body;
+  this.language = rawprojectData.language;
+  this.collaborator = rawprojectData.collaborator;
+  this.image = rawprojectData.image;
   projects.push(this);
 }
 
