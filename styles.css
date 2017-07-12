@@ -1,0 +1,17 @@
+@media (min-width: 800px) {
+  nav i.fa.fa-bars{
+  display:none;
+ }
+}
+
+@media (max-width: 800px) {
+  .main-nav ul {
+    display: none;
+    padding: 1px;
+    clear: both;
+  }
+}
+
+#name {
+  text-align:center;
+}
