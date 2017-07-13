@@ -12,6 +12,10 @@
   }
 }
 
+h1 {
+  font-size: 36px;
+}
+
 .template {
   display: none;
 }
@@ -33,7 +37,11 @@
 }
 
 #name {
-  text-align:center;
+  text-align: center;
   margin: 10px;
   padding: 10px;
 }
+
+ .tab-content {
+   display: none;
+ }

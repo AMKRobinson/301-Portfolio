@@ -6,6 +6,19 @@ $(function() {
     e.preventDefault();
     $('.list').slideToggle();
   });
+
+  $('#home').css('display', 'block');
+});
+
+$('.tab').on('click', function(e) {
+  var domTabs = $('.tab-content');
+  domTabs.each(function() {
+    $(this).css('display', 'none');
+  });
+  var clickedTab = e.target;
+  var sectionTarget = clickedTab.dataset.content;
+  console.log('sectionTarget: ', sectionTarget);
+  $('#' + sectionTarget).css('display', 'block');
 });
 
 function Article (rawDataObj) {
@@ -30,12 +43,15 @@ Article.prototype.toHtml = function() {
   $newArticle.append('<hr>');
   return $newArticle;
 };
+
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
+
 rawData.forEach(function(articleObject) {
   articles.push(new Article(articleObject));
 });
+
 articles.forEach(function(article) {
   $('#projects').append(article.toHtml());
 });
