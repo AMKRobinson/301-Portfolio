@@ -1,47 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Anthony Robinson</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Anthony Robinson</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <header class="site-header clearfix">
       <h1 id="name">Anthony Robinson</h1>
-    <section>
-      <nav class="main-nav">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        <ul class="list">
-          <li class="tab" data-content="articles"><a href="#"> Home</a></li>
-          <li class="tab" data-content="about"><a href="#"> About</a></li>
-          <li><a href="https://www.linkedin.com/in/anthony-robinson-b8a01354/" target="_blank"> Linkedin</a></li>
-          <li><a href="https://github.com/Twandalon" target="_blank"> GitHub</a></li>
-        </ul>
-      </nav>
-    </section>
+      <section>
+        <nav class="main-nav">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+          <ul class="list">
+            <li class="tab" data-content="home">Home</li>
+            <li class="tab" data-content="projects">Projects</li>
+            <li class="tab" data-content="about">About</li>
+            <li class="tab"><a href="https://www.linkedin.com/in/anthony-robinson-b8a01354/" target="_blank"> Linkedin</a></li>
+            <li class="tab"><a href="https://github.com/Twandalon" target="_blank"> GitHub</a></li>
+          </ul>
+        </nav>
+      </section>
   </header>
-  <main>
-    <section id="projects">
-      <article class="template" data-category="cat">
-        <header>
-          <h1>Title</h1>
-          <div>
-            published <time pubdate datetime="2000-01-01">Publish Time</time>
-          </div>
-        </header>
-        <section class="article-body"></section>
-      </article>
-    </section>
-  </main>
-  <footer>
-  </footer>
-  <!-- vendor scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://use.fontawesome.com/d2e7b587eb.js"></script>
-  <!-- local scripts -->
-  <script type="text/javascript" src="scripts/sourcedata.js"></script>
-  <script type="text/javascript" src="scripts/app.js"></script>
-  </body>
+    <main>
+      <section id="home" class="tab-content">
+        <h1>Home</h1>
+        <h3>this is the home section</h3>
+      </section>
+      <section id="about" class="tab-content">
+        <h1>About</h1>
+        <h2>this is the about section</h2>
+      </section>
+      <section id="projects" class="tab-content">
+        <article class="template" data-category="cat">
+          <header>
+            <h1>Title</h1>
+            <div>
+              published <time pubdate datetime="2000-01-01">Publish Time</time>
+            </div>
+          </header>
+          <section class="article-body"></section>
+        </article>
+      </section>
+    </main>
+    <footer>
+    </footer>
+    <!-- vendor scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/d2e7b587eb.js"></script>
+    <!-- local scripts -->
+    <script type="text/javascript" src="scripts/sourcedata.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    </body>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
 </html>
