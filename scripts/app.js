@@ -33,10 +33,7 @@ Article.prototype.toHtml = function() {
   $newArticle.addClass('name');
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.data('category', this.category);
-  // appending object properties to html
   $newArticle.find('h1').html(this.title);
-  // $newArticle.find('a').html(this.language);
-  // $newArticle.find('a').attr('href',this.projectUrl);
   $newArticle.find('section').html(this.body);
   $newArticle.find('time').attr('datetime',this.publishedOn);
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');

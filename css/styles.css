@@ -13,7 +13,7 @@
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .template {
@@ -26,7 +26,6 @@ h1 {
 }
 
 .main-nav {
-  text-align: right;
   margin-right: 10px;
 }
 
@@ -42,6 +41,19 @@ h1 {
   padding: 10px;
 }
 
- .tab-content {
-   display: none;
- }
+.list{
+  text-align: center;
+}
+
+.tab-content {
+  display: none;
+  text-align: center;
+  border-style: inset;
+  border-color: black;
+  width: 50%;
+  margin: auto;
+}
+
+.tab {
+  display: inline;
+}
