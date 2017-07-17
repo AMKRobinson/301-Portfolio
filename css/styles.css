@@ -35,6 +35,16 @@ h1 {
   width: 400px;
 }
 
+.tab:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #name {
   text-align: center;
   margin: 10px;
@@ -56,4 +66,8 @@ h1 {
 
 .tab {
   display: inline;
+}
+
+.fa-bars {
+  margin-left: 100px;
 }
