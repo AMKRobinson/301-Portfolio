@@ -14,13 +14,15 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/modules.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -55,17 +57,24 @@
         <h1>About</h1>
         <h2>this is the about section</h2>
       </section>
+
+      <section>
+      <!-- <div id="articles"> -->
+      <script id="projectlist-template" type="text/x-handlebars-template">
       <section id="projects" class="tab-content">
-        <article class="template" data-category="cat">
           <header>
-            <h1>Title</h1>
-            <div>
-              published <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
+            <h1>{{title}}</h1>
+            <div>{{images}}</div>
           </header>
-          <section class="article-body"></section>
-        </article>
+          <section>{{body}}</section>
+          <section>{{projectUrl}}</section>
+      </script>
+      </div>
       </section>
+    </section>
+    <div id="articles">
+    </div>
+
     </main>
     <footer>
     </footer>
