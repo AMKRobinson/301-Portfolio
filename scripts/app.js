@@ -21,14 +21,10 @@ $('.tab').on('click', function(e) {
   });
   var clickedTab = e.target;
   var sectionTarget = clickedTab.dataset.content;
-  console.log('sectionTarget: ', sectionTarget);
   $('#' + sectionTarget).css('display', 'block');
 });
 
 // Project constructor function
-
-Project.all = [];
-console.log(Project.all);
 
 function Project (rawDataObj) {
   this.title = rawDataObj.title;
@@ -36,6 +32,8 @@ function Project (rawDataObj) {
   this.projectUrl = rawDataObj.projectUrl;
   this.images = rawDataObj.images;
 }
+
+Project.all = [];
 
 // This function selects the project template and compiles the data from the constructor
 
@@ -46,38 +44,36 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(rawData) {
+  console.log('rd: ', rawData);
   rawData.forEach(function(ele) {
+    console.log('el', ele);
     Project.all.push(new Project(ele));
   })
 };
 
-// This pushes the objects into the projects array.
-
-// rawData.forEach(function(projectObject) {
-//   projects.push(new Project(projectObject));
-// });
-
-// This appends each object to the section with the id of article
-
-// projects.forEach(function(potato) {
-//   $('#article').append(potato.toHtml());
-// });
+function loadProjectsToDom() {
+  Project.all.forEach(function(potato) {
+    $('#article').append(potato.toHtml());
+  });
+}
 
 // fetch the json data
 
 Project.fetchAll = function() {
+  console.log('assbarf');
   if (localStorage.rawData) {
     Project.loadAll(JSON.parse(localStorage.rawData));
+    loadProjectsToDom();
   } else {
-    $.getJSON('rawData.json')
+    $.getJSON('data/rawData.json')
       .then(function(data) {
         localStorage.setItem('rawData', JSON.stringify(data))
-        console.log('Winning!' + data)
+        console.log('Winning!', data)
         Project.loadAll(JSON.parse(localStorage.rawData))
+        loadProjectsToDom();
       }, function(err) {
-        console.log('Doh!' + err)
+        console.log('Doh!', err)
       })
   }
 }
-
 Project.fetchAll();
