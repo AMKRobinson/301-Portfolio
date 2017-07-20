@@ -1,0 +1,25 @@
+{
+  "name": "301-portfolio",
+  "version": "1.0.0",
+  "description": "Anthony's Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twandalon/301-Portfolio.git"
+  },
+  "author": "Anthony Robinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Twandalon/301-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Twandalon/301-Portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {}
+}

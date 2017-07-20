@@ -13,7 +13,7 @@
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .template {
@@ -36,13 +36,22 @@ h1 {
 }
 
 .tab:hover {
-  background-color: red;
+  background-color: black;
   cursor: pointer;
+  color: white;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+html {
+  background: url(./northbend.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #name {
@@ -60,6 +69,7 @@ a {
   text-align: center;
   border-style: inset;
   border-color: black;
+  background: rgba(177,177,178,0.7);
   width: 50%;
   margin: auto;
 }
