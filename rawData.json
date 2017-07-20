@@ -1,16 +1,16 @@
 [{
 	"title": "Project 1",
 	"images": "url",
-	"body": "<p>hi</p>",
+	"body": "hi",
 	"projectUrl": "projecturl"
 }, {
 	"title": "Project 3",
 	"images": "url",
-	"body": "<p>hi</p>",
+	"body": "hi",
 	"projectUrl": "projecturl"
 }, {
 	"title": "Project 2",
 	"images": "url",
-	"body": "<p>hi</p>",
+	"body": "hi",
 	"projectUrl": "projecturl"
 }]

@@ -1,5 +1,5 @@
 'use strict';
-var projects = [];
+
 
 // Hamburger icon animation & show nav
 
@@ -27,6 +27,9 @@ $('.tab').on('click', function(e) {
 
 // Project constructor function
 
+Project.all = [];
+console.log(Project.all);
+
 function Project (rawDataObj) {
   this.title = rawDataObj.title;
   this.body = rawDataObj.body;
@@ -42,14 +45,39 @@ Project.prototype.toHtml = function() {
   return compiled(this);
 };
 
+Project.loadAll = function(rawData) {
+  rawData.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  })
+};
+
 // This pushes the objects into the projects array.
 
-rawData.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-});
+// rawData.forEach(function(projectObject) {
+//   projects.push(new Project(projectObject));
+// });
 
 // This appends each object to the section with the id of article
 
-projects.forEach(function(potato) {
-  $('#article').append(potato.toHtml());
-});
+// projects.forEach(function(potato) {
+//   $('#article').append(potato.toHtml());
+// });
+
+// fetch the json data
+
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+  } else {
+    $.getJSON('rawData.json')
+      .then(function(data) {
+        localStorage.setItem('rawData', JSON.stringify(data))
+        console.log('Winning!' + data)
+        Project.loadAll(JSON.parse(localStorage.rawData))
+      }, function(err) {
+        console.log('Doh!' + err)
+      })
+  }
+}
+
+Project.fetchAll();
