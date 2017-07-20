@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Anthony Robinson</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Anthony Robinson</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/modules.css">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/modules.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-</head>
-<body>
+  </head>
+  <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <header class="site-header clearfix">
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <header class="site-header clearfix">
       <h1 id="name">Anthony Robinson</h1>
       <section>
         <nav class="main-nav">
@@ -47,34 +47,34 @@
           </ul>
         </nav>
       </section>
-  </header>
+    </header>
+
     <main>
+
       <section id="home" class="tab-content">
         <h1>Home</h1>
         <h3>this is the home section</h3>
       </section>
+
       <section id="about" class="tab-content">
         <h1>About</h1>
         <h2>this is the about section</h2>
       </section>
 
-      <section>
-      <!-- <div id="articles"> -->
-      <script id="projectlist-template" type="text/x-handlebars-template">
       <section id="projects" class="tab-content">
-          <header>
-            <h1>{{title}}</h1>
-            <div>{{images}}</div>
-          </header>
-          <section>{{body}}</section>
-          <section>{{projectUrl}}</section>
-      </script>
-      </div>
+        <div id="article">
+          <script id="projectlist-template" type="text/x-handlebars-template">
+            <section style="border: 1px solid #ddd; margin: 5px;">
+                <header>
+                  <h1>{{title}}</h1>
+                  <div>{{images}}</div>
+                </header>
+                <section>{{body}}</section>
+                <section>{{projectUrl}}</section>
+            </section>
+          </script>
+        </div>
       </section>
-    </section>
-    <div id="articles">
-    </div>
-
     </main>
     <footer>
     </footer>
@@ -85,9 +85,8 @@
     <!-- local scripts -->
     <script type="text/javascript" src="scripts/sourcedata.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
-    </body>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
 </html>
