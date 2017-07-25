@@ -60,7 +60,6 @@ function loadProjectsToDom() {
 // fetch the json data
 
 Project.fetchAll = function() {
-  console.log('assbarf');
   if (localStorage.rawData) {
     Project.loadAll(JSON.parse(localStorage.rawData));
     loadProjectsToDom();
