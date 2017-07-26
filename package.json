@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Twandalon/301-Portfolio#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "page": "^1.7.1"
   },
   "devDependencies": {}
 }
