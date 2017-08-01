@@ -6,10 +6,11 @@ var app = app || {};
 // Project constructor function
 
   function Project (rawDataObj) {
-    this.title = rawDataObj.title;
-    this.body = rawDataObj.body;
-    this.projectUrl = rawDataObj.projectUrl;
-    this.images = rawDataObj.images;
+    this.title = rawDataObj.full_name;
+    this.body = rawDataObj.description || 'No Description.';
+    this.projectUrl = rawDataObj.size;
+    this.images = rawDataObj.private;
+    this.clone_url = rawDataObj.clone_url;
   }
 
   Project.all = [];
@@ -31,8 +32,8 @@ var app = app || {};
   };
 
   function loadProjectsToDom() {
-    Project.all.forEach(function(allprojects) {
-      $('#article').append(allprojects.toHtml());
+    Project.all.forEach(function(project) {
+      $('#article').append(project.toHtml());
     });
   }
 
@@ -40,14 +41,15 @@ var app = app || {};
 
   Project.fetchAll = function() {
     if (localStorage.rawData) {
-      Project.loadAll(JSON.parse(localStorage.rawData));
+      Project.loadAll(JSON.parse(localStorage.repos));
       loadProjectsToDom();
     } else {
-      $.getJSON('data/rawData.json')
+      $.getJSON('/github/users/twandalon/repos')
         .then(function(data) {
-          localStorage.setItem('rawData', JSON.stringify(data))
+          console.log(data);
+          localStorage.setItem('repos', JSON.stringify(data))
           console.log('Winning!', data)
-          Project.loadAll(JSON.parse(localStorage.rawData))
+          Project.loadAll(JSON.parse(localStorage.repos))
           loadProjectsToDom();
         }, function(err) {
           console.log('Doh!', err)

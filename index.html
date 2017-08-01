@@ -66,11 +66,11 @@
           <script id="projectlist-template" type="text/x-handlebars-template">
             <section style="border: 1px solid #ddd; margin: 5px;">
                 <header>
-                  <h1>{{title}}</h1>
-                  <div>{{images}}</div>
+                  <h1><a href={{clone_url}}>{{title}}</a></h1>
+                  <div>Private: {{images}}</div>
                 </header>
-                <section>{{body}}</section>
-                <section>{{projectUrl}}</section>
+                <section>Description: {{body}}</section>
+                <section>Size: {{projectUrl}}</section>
             </section>
           </script>
         </div>
@@ -82,8 +82,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="https://use.fontawesome.com/d2e7b587eb.js"></script>
+
+
+    </script>
     <!-- local scripts -->
     <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="/vendor/page.js"></script>
 
   </body>
 </html>
